@@ -19,6 +19,9 @@ class CreateTickersTable extends Migration
             $table->foreign('exchange_id')->references('id')->on('exchanges')
                 ->onDelete('restrict');
             $table->decimal('price', 13, 4)->nullable();
+            $table->string('symbol');
+            $table->string('base');
+            $table->string('quote');
             $table->timestamps();
         });
     }

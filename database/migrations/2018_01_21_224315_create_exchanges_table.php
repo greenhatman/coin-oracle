@@ -18,6 +18,13 @@ class CreateExchangesTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+        DB::table('exchanges')->insert(
+            array(
+                'id' => 1,
+                'name' => 'Luno'
+            )
+        );
     }
 
     /**
